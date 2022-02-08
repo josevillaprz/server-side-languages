@@ -29,7 +29,6 @@ def ValidateInputString(message):
 # int input validation
 def ValidateInputInt(message):
     response = input(message)
-    # while (not response.isnumeric()) or (response <= 0):
     while (not response.isnumeric()) or (int(response) < 0 or int(response) > 100):
         response = input("Please enter a grade (0 - 100): ")
     return int(response)
