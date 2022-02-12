@@ -46,11 +46,13 @@ let name = '',
     grade = ''
 
 rl.question("Enter the name of the student: ", (inputName) => {
-    name = inputNam
+    name = inputName
     rl.question("Next, enter the assignment name: ", (inputAssignment) => {
         assignment = inputAssignment
         rl.question("Finally, enter the grade for " + assignment + ": ", (inputGrade) => {
             grade = inputGrade
+            let gradeAssignment = new Grader(name, assignment, grade)
+            console.log(gradeAssignment.GradeCalc())
             rl.close
         })
         rl.close
@@ -58,5 +60,3 @@ rl.question("Enter the name of the student: ", (inputName) => {
     rl.close
 })
 
-let gradeAssignment = new Grader(name, assignment, grade)
-console.log("running")
