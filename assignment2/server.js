@@ -31,6 +31,7 @@ http.createServer((request, response)=>{
     if(f){
         fs.readFile(f, (err, data) => {
             if(err){
+                console.log(err)
                 response.writeHead(505)
                 response.end("Crap, something went wrong")
             }
@@ -38,7 +39,9 @@ http.createServer((request, response)=>{
                 if(mimeTypes.hasOwnProperty(ext)){
                     response.writeHead(200, { 'Content-Type': ext})
                 }
-                response.write("<script> let page = '" + file + "'; </script>");
+                if(ext == ".html") {
+                    response.write("<script> let page = '" + file + "'; </script>");
+                }
                 response.end(data, 'utf-8')
             }
         })
