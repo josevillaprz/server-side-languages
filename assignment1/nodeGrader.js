@@ -1,5 +1,4 @@
 // importing the readline library
-const { flip } = require("@popperjs/core")
 const readline = require("readline")
 
 class Grader {
