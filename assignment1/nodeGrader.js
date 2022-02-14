@@ -29,11 +29,6 @@ class Grader {
     }
 }
 
-function ValidateStringInput(message){
-    console.log(message)
-
-}
-
 // setting up the interface four the console
 const rl = readline.createInterface({
     input: process.stdin,
