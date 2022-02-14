@@ -14,12 +14,12 @@ class Grader {
             return "Grade: A"
         }
         else if(grade >= 80 && grade <= 89){
-        return "Grade: B"
+            return "Grade: B"
         }
         else if(grade >= 70 && grade <= 79){
             return "Grade: C"
         }
-        else if(grade >= 69 && grade <= 70){
+        else if(grade >= 60 && grade <= 70){
             return "Grade: D"
         }
         else {
