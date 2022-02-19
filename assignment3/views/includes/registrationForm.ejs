@@ -1,0 +1,67 @@
+<form action="registration" method="POST" id="contactForm">
+    <div class="form-floating mb-3">
+        <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..."
+            data-sb-validations="required" />
+        <label for="name">Full name</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input class="form-control" id="address" name="address" type="text" placeholder="Enter your Address..."
+            data-sb-validations="required" />
+        <label for="address">Address</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input class="form-control" id="city" name="city" type="text" placeholder="Enter your City..."
+            data-sb-validations="required" />
+        <label for="city">City</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input class="form-control" id="state" name="state" type="text" placeholder="Enter your State..."
+            data-sb-validations="required" />
+        <label for="state">State</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input class="form-control" id="zip" name="zip" type="number" placeholder="Enter your Zip..."
+            data-sb-validations="required" />
+        <label for="zip">Zip</label>
+    </div>
+    <div class="form-floating mb-3">
+        <label for="age">Age</label>
+        <select class="ageLabel" name="age">
+            <option value="">--</option> 
+            <% for( let i = 0; i < 100; i++ ) { %>
+                <option value="<%= i %> "><%= i %> </option>
+            <% } %>
+        </select>
+    </div>  
+    <div class="form-floating mb-3">
+        <div>
+            <input type="radio" name="gender" id="male" value="male" checked>
+            <label for="male">Male</label>
+        </div>
+        <div>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+        </div>
+    </div>  
+    <div class="form-floating mb-3">
+        <div>
+            <input type="checkbox" id="signup" name="consent">
+            <label for="consent">Subscribe to weekly news letter</label>
+        </div>
+    </div>  
+    <div class="form-floating mb-3">
+        <textarea class="form-control" id="bio" name="bio" type="text"
+            placeholder="Enter your bio here..." style="height: 10rem"
+            data-sb-validations="required"></textarea>
+        <label for="bio">Tell us about yourself..</label>
+        <div class="invalid-feedback" data-sb-feedback="bio:required">A bio is required.
+        </div>
+    </div>
+     <div class="d-grid">
+         <button class="btn btn-primary btn-xl enabled" id="submitButton" type="submit">Submit</button>
+    </div>
+</form>
+
+
+
+
